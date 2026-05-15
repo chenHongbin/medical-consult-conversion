@@ -1,4 +1,4 @@
-# 医疗咨询转化技能
+# 赖静茹老师医疗咨询转化Skill技能
 
 基于赖静茹老师20年大健康行业咨询培训实战经验，覆盖6大模块的医疗咨询转化技能包。
 
@@ -66,3 +66,71 @@
 ---
 
 > 能力很重要，但**能量比能力更重要**。
+
+---
+
+## 安装与使用
+
+### 方式一：Claude Code（推荐）
+
+**步骤1：** 把本仓库克隆到本地
+
+```bash
+git clone https://github.com/chenHongbin/medical-consult-conversion.git
+```
+
+**步骤2：** 将 `medical-consult-conversion` 文件夹放入 Claude Code 的 skills 目录
+
+```bash
+# 项目级（只对当前项目生效）
+mkdir -p /你的项目路径/.claude/skills
+cp -r medical-consult-conversion /你的项目路径/.claude/skills/
+
+# 或用户级（对所有项目生效）
+mkdir -p ~/.claude/skills
+cp -r medical-consult-conversion ~/.claude/skills/
+```
+
+**步骤3：** 重启 Claude Code，或在对话中直接引用 skill 文件路径使用
+
+**使用方法：**
+- 在 Claude Code 中提问任何与医疗咨询转化相关的问题，例如：
+  - "客户说再考虑考虑，怎么跟进？"
+  - "给我3句安抚术前焦虑的话术"
+  - "团队新人培训怎么设计？"
+  - "怎么用AI生成回访话术？"
+
+### 方式二：OpenClaw / 其他 AI Agent 工具
+
+**通用安装步骤：**
+
+1. 克隆本仓库到本地
+2. 将 `medical-consult-conversion` 目录复制到你的 AI Agent 工具的 skills 目录下
+   - OpenClaw 通常为 `~/.openclaw/skills/` 或项目内的 `.openclaw/skills/`
+   - 具体路径请参考对应工具的官方文档
+3. 重启 AI Agent 或刷新技能列表
+
+**验证是否安装成功：**
+向 AI 提问："帮我写一段应对客户价格犹豫的话术"，如果 AI 能引用本 skill 中的三段式安抚框架和具体话术，说明安装成功。
+
+### 方式三：IMA Work Buddy / 知识库导入
+
+如果你使用 IMA（ima.qq.com）的 Work Buddy 或知识库功能：
+
+1. 打开 IMA 客户端，进入你的知识库
+2. 将 `medical-consult-conversion/` 目录下的所有 `.md` 文件批量导入知识库
+3. 在 Work Buddy 中配置引用该知识库
+4. 与 Work Buddy 对话时，它会基于这些资料回答咨询转化相关问题
+
+### 方式四：直接使用（无需安装）
+
+如果你不想配置 skill，也可以直接复制本仓库中的任意 `.md` 文件内容，粘贴到 ChatGPT、Claude、Kimi、豆包等 AI 工具的对话框中作为上下文，然后提问。
+
+**推荐 Prompt 模板：**
+```
+你是一位医疗咨询培训专家。以下是赖静茹老师的话术库资料：
+
+[粘贴 scripts.md 中的相关内容]
+
+请基于以上资料，帮我写一段应对[具体场景]的话术。
+```
